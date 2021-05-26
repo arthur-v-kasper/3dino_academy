@@ -1,14 +1,14 @@
 import React from "react";
 import { text } from "@storybook/addon-knobs";
 
-import Hero from "../components/Hero";
-import Dino1 from "../stories/assets/dino-01.jpg";
-import Dino2 from "../stories/assets/dino-02.jpg";
-import Heading from "../components/Heading";
-import Button from "./Button";
+import Dino1 from "stories/assets/dino-01.jpg";
+import Dino2 from "stories/assets/dino-02.jpg";
+import Heading from "components/atoms/Heading";
+import Button from "components/atoms/Button";
+import Hero from "./Hero";
 
 export default {
-  title: "Components/Hero",
+  title: "Components/Molecules/Hero",
   componet: Hero,
 };
 
