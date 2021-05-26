@@ -24,7 +24,7 @@ exports[`match spapshot 1`] = `
   position: absolute;
   left: 0;
   bottom: -3px;
-  background-color: #ffc107;
+  background-color: #ffc117;
   height: 5px;
   width: 70px;
 }

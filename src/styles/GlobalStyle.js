@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 700;
     letter-spacing: 2px;
       strong {
-        color: #ffc107;
+        color: ${props => props.theme.colors.primary.main};
       }
   }
 

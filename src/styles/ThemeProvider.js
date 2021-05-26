@@ -1,7 +1,12 @@
 import React from 'react'
 import { ThemeProvider as StyledProvider} from 'styled-components';
 
-const theme = {
+export const ThemeName = {
+  light: "light",
+  ocean: "ocean"
+}
+
+const light = {
   colors: {
     primary: {
       main: "#ffc117",
@@ -15,12 +20,32 @@ const theme = {
       text: "#212121"
     }
   }
-}
+};
 
-const ThemeProvider = ({children}) => (
-  <StyledProvider theme={theme}>
+const allThemes = {
+  light, 
+  ocean: {
+    ...light,
+    colors: {
+      ...light.colors,
+      primary: {
+        main: "#2196f3",
+        dark: "#1769aa",
+        ligh: "#4dabf5",
+        text: "#fff"
+      }
+    }
+  }
+};
+
+const ThemeProvider = ({ theme ,children}) => (
+  <StyledProvider theme={allThemes[theme]}>
     {children}
   </StyledProvider>
 );
+
+ThemeProvider.defaultProps = {
+  theme: "light"
+};
 
 export default ThemeProvider;
