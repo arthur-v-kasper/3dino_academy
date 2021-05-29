@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Container from "components/atoms/Container";
 
 import styled, {css} from 'styled-components';
-
-import {breakAt, BreakpointSizes} from "styles/Breakpoints"
 
 const Root = styled.div`
   color: #fff;
@@ -18,34 +17,21 @@ const Root = styled.div`
 `;
 
 const Content = styled.div`
-  p,
+  display: inline-block;
+
+   p,
   li {
-  font-size: 20px;
-  font-weight: 300;
+    font-size: 20px;
+    font-weight: 300;
   }
   li {
-  padding-left: 0;
-  list-style: none;
+    padding-left: 0;
+    list-style: none;
   }
   li::before {
-  content: "\\2319\\0020";
-  color: ${props => props.theme.colors.primary.main};
-  }
-`;
-
-const Container = styled.div`
-  width: 100%;
-  padding: 0 8px;
-
-  ${breakAt(BreakpointSizes.sm)}{
-    padding: 0 16px;
-  }
-
-  ${breakAt(BreakpointSizes.lg)}{
-    width: 1140px;
-    padding: 0;
-    margin: 0 auto;
-  }
+    content: "\\2319\\0020";
+    color: ${props => props.theme.colors.primary.main};
+  } 
 `;
 
 const Hero = ({ image, children }) => (
