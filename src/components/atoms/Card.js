@@ -44,14 +44,15 @@ CardMedia.defaultProps = {
 CardMedia.propTypes = {
   children: PropTypes.string,
 };
-
-const StyledCard = styled.div`
-  background-color: #fff;
-  border-radius: 4px;
-`;
 //#endregion
 
 //#region Card
+const StyledCard = styled.div`
+  background-color: #fff;
+  border-radius: 4px;
+  overflow:hidden; //corrige arredondamento na de cards com imagem, mais detalhes aula 135
+`;
+
 const Card = ({children}) => (
   <StyledCard>
     {children}
