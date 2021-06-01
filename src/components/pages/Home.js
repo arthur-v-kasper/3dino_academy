@@ -10,11 +10,28 @@ import Feature from "components/atoms/Feature";
 import Grid from "components/atoms/Grid";
 import Section from "components/molecules/Section";
 import Footer from "components/organisms/Footer";
+import ProductGrid from "components/organisms/ProductGrid";
 
 import HeroImage from "assets/dino-01.jpg";
 import HeroVideo from "assets/dinosaur.mp4";
 
 
+import ProductImage1 from "assets/dino-vet.png";
+import ProductImage2 from "assets/dino-vet2.png";
+import ProductImage3 from "assets/dino-vet3.png";
+import ProductImage4 from "assets/dino-vet4.png";
+import ProductImage5 from "assets/dino-vet5.png";
+import ProductImage6 from "assets/dino-vet6.png";
+
+
+const products = [
+  {id:0, title:"Ipsum non Velit", summary:"Excepteur ullamco mollit eu culpa ipsum non velit adipisicing aliquip.", image: ProductImage1},
+  {id:1, title:"Excepteur ullamco mollit", summary:"Excepteur ullamco mollit eu culpa ipsum non velit adipisicing aliquip.", image: ProductImage2},
+  {id:2, title:"Adipisicing aliquip", summary:"Excepteur ullamco mollit eu culpa ipsum non velit adipisicing aliquip.", image: ProductImage3},
+  {id:3, title:"Culpa ipsum non", summary:"Excepteur ullamco mollit eu culpa ipsum non velit adipisicing aliquip.", image: ProductImage4},
+  {id:4, title:"Ullamco mollit eu culpa", summary:"Excepteur ullamco mollit eu culpa ipsum non velit adipisicing aliquip.", image: ProductImage5},
+  {id:5, title:"Non velit adipisicing", summary:"Excepteur ullamco mollit eu culpa ipsum non velit adipisicing aliquip.", image: ProductImage6}, 
+];
 
 const Home = () => (
   <>
@@ -23,7 +40,7 @@ const Home = () => (
         <h1>
           Venha conhecer tudo sobre <strong>renderização 3D</strong>
           <br />  
-          com dinosauros.
+          com dinosauros
         </h1>
       </Heading>
       <ul>
@@ -52,6 +69,7 @@ const Home = () => (
     <Section inverse>
       <Heading>
         <h2>Conheça nossos serviços</h2>
+        <ProductGrid products={products} />
       </Heading>
     </Section>
     <Section>
