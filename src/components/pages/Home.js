@@ -47,7 +47,7 @@ const Home = () => (
         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-      </ul>${props => props.theme.colors.primary.main};
+      </ul>
       <Button color="primary" variant="outlined" >Matricule-se Agora</Button>
     </Hero>
     <Section>
