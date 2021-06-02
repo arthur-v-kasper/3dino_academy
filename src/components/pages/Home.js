@@ -11,11 +11,10 @@ import Grid from "components/atoms/Grid";
 import Section from "components/molecules/Section";
 import Footer from "components/organisms/Footer";
 import ProductGrid from "components/organisms/ProductGrid";
+import Accordion, { AccordionGroup } from "components/atoms/Accordion";
 
 import HeroImage from "assets/dino-01.jpg";
 import HeroVideo from "assets/dinosaur.mp4";
-
-
 import ProductImage1 from "assets/dino-vet.png";
 import ProductImage2 from "assets/dino-vet2.png";
 import ProductImage3 from "assets/dino-vet3.png";
@@ -95,6 +94,17 @@ const Home = () => (
       <Heading>
         <h2>Dúvidas frequentes</h2>
       </Heading>
+      <AccordionGroup>
+        <Accordion title="Preciso ter algum conhecimento prévio?">
+          Laboris velit ullamco velit qui duis eiusmod occaecat cillum laborum magna. Exercitation ipsum id esse minim exercitation deserunt ipsum nulla qui est cillum non sunt ex.
+        </Accordion>
+        <Accordion title="O acesso é vitalício?">
+          Laboris velit ullamco velit qui duis eiusmod occaecat cillum laborum magna. Exercitation ipsum id esse minim exercitation deserunt ipsum nulla qui est cillum non sunt ex.
+        </Accordion>
+        <Accordion title="As aulas são on-line ou gravadas?">
+          Laboris velit ullamco velit qui duis eiusmod occaecat cillum laborum magna. Exercitation ipsum id esse minim exercitation deserunt ipsum nulla qui est cillum non sunt ex.
+        </Accordion>
+      </AccordionGroup>
     </Section>
     <Footer />
   </>
