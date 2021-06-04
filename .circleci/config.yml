@@ -11,16 +11,40 @@ jobs:
     steps:
       - checkout
       - node/install-yarn
-      - run: node --version
-      - run: yarn --version
+      - run:
+          name: Show node version
+          command: |
+            node --version
+            yarn --version
       - node/install-packages:
           pkg-manager: yarn
-      - run: yarn lint
-      - run: yarn cover
+      - run:
+          name: Run unit test with lint
+          command: yarn lint
+      - run:
+          name: Run unit test with cover
+          command: yarn cover
       - codecov/upload:
           file: coverage/*.json
+      - run:
+          name: Publish to Chromatic
+          command: yarn chromatic --project-token=${CHROMATIC_TOKEN}
+  versioning:
+    docker:
+      - image: circleci/node:14.17.0
+    steps:
+      - checkout
+      - run:
+          name: Check packege version
+          command: node scripts/check-version arthur-v-kasper 3dino_academy
 
 workflows:
   ci:
     jobs:
       - test
+      - versioning:
+          filters:
+            branches:
+              ignore: main
+            tags:
+              ignore: /.*/

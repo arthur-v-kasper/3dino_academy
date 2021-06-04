@@ -1,6 +1,6 @@
 {
   "name": "dinosaur_page",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "dependencies": {
     "@storybook/addon-actions": "^6.2.9",
@@ -36,7 +36,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "chromatic --project-token=ad21d326896c",
+    "chromatic": "chromatic --exit-zero-on-changes",
     "lint": "eslint src/**/**.js"
   },
   "eslintConfig": {
