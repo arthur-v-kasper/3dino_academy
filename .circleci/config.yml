@@ -34,7 +34,7 @@ workflows:
       - test
       - versioning:
           filters:
-            braches:
+            branches:
               ignore: main
             tags:
               ignore: /.*/
