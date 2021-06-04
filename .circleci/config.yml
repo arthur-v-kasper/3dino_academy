@@ -19,8 +19,22 @@ jobs:
       - run: yarn cover
       - codecov/upload:
           file: coverage/*.json
+  versioning:
+    docker:
+      - image: circleci/node:14.17.0
+    steps:
+      - checkout
+      - run:
+          name: Check packege version
+          command: node scripts/check-version arthur-v-kasper 3dino_academy
 
 workflows:
   ci:
     jobs:
       - test
+      - versioning:
+          filters:
+            braches:
+              ignore: main
+            tags:
+              ignore: /.*/
