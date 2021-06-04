@@ -11,11 +11,11 @@ jobs:
     steps:
       - checkout
       - node/install-yarn
-      run:
-        name: Show node version
-        command: |
-          node --version
-          yarn --version
+      - run:
+          name: Show node version
+          command: |
+            node --version
+            yarn --version
       - node/install-packages:
           pkg-manager: yarn
       - run:
