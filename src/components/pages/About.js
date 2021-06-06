@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Hero from "components/molecules/Hero";
-import Herading from "components/atoms/Heading";
 import styled from 'styled-components';
 
+import Hero from "components/molecules/Hero";
+import Herading from "components/atoms/Heading";
 import Section from "components/molecules/Section";
 import Grid from "components/atoms/Grid";
 import Footer from "components/organisms/Footer";
