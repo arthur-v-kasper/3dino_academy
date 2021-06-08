@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import styled from 'styled-components';
 
 import {useScrollToTop} from "hooks/scroll";
@@ -114,12 +114,12 @@ const About = () => {
   );
 }
 
-About.defaultProps = {
+// About.defaultProps = {
   
-};
+// };
 
-About.propTypes = {
+// About.propTypes = {
   
-};
+// };
 
 export default About;

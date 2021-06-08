@@ -40,7 +40,7 @@ const Home = () => (
         <h1>
           Venha conhecer tudo sobre <strong>renderização 3D</strong>
           <br />  
-          com dinosauros
+          com dinossauros
         </h1>
       </Heading>
       <ul>
