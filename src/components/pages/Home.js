@@ -1,6 +1,7 @@
 import React from "react";
 // import Proptypes from "prop-types";
 import { FaOtter, FaCheck, FaStudiovinari, FaCashRegister } from "react-icons/fa";
+import {Link} from "react-router-dom";
 
 
 import Hero from "components/molecules/Hero";
@@ -82,7 +83,7 @@ const Home = () => (
             Duis aliquip consectetur excepteur amet non nostrud ad non sunt. Nostrud do commodo ea dolore est fugiat amet Lorem reprehenderit elit aliqua. Ullamco mollit non incididunt deserunt laboris duis sint laboris.
           </p>
           <div>
-            <Button color="primary">Saiba mais</Button>
+            <Button as={Link} to="/about" color="primary">Saiba mais</Button>
           </div>
         </div>
         <div>
