@@ -1,15 +1,16 @@
 import { addDecorator, addParameters } from  "@storybook/react";
 import GlobalStyle from "../src/styles/GlobalStyle";
 import ThemeProvider, { ThemeName } from "../src/styles/ThemeProvider";
-import { select } from  "@storybook/addon-knobs";
+import {select} from  "@storybook/addon-knobs";
+import {MemoryRouter as Router} from "react-router-dom";
 
 addDecorator(storyFin =>(
-  <>
+  <Router>
     <ThemeProvider theme={select("Themes", ThemeName, ThemeName.light)}>
       <GlobalStyle />
       {storyFin()}
     </ThemeProvider>
-  </>
+  </Router>
 ));
 
 export const parameters = {

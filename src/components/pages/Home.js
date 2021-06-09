@@ -1,6 +1,7 @@
 import React from "react";
 // import Proptypes from "prop-types";
 import { FaOtter, FaCheck, FaStudiovinari, FaCashRegister } from "react-icons/fa";
+import {Link} from "react-router-dom";
 
 
 import Hero from "components/molecules/Hero";
@@ -39,7 +40,7 @@ const Home = () => (
         <h1>
           Venha conhecer tudo sobre <strong>renderização 3D</strong>
           <br />  
-          com dinosauros
+          com dinossauros
         </h1>
       </Heading>
       <ul>
@@ -82,11 +83,11 @@ const Home = () => (
             Duis aliquip consectetur excepteur amet non nostrud ad non sunt. Nostrud do commodo ea dolore est fugiat amet Lorem reprehenderit elit aliqua. Ullamco mollit non incididunt deserunt laboris duis sint laboris.
           </p>
           <div>
-            <Button color="primary">Saiba mais</Button>
+            <Button as={Link} to="/about" color="primary">Saiba mais</Button>
           </div>
         </div>
         <div>
-          <video src={HeroVideo} width="100%" autoPlay loop muted />
+          <video src={HeroVideo} width="100%" autoPlay playsInline loop muted />
         </div>
       </Grid>      
     </Section>

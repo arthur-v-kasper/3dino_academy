@@ -30,19 +30,26 @@ CardBody.propTypes = {
 
 //#region CardMedia
 export const StyledMedia = styled.div`
+  display: flex;
   background-image: url(${props => props.image});
   background-position: center center;
   background-size: cover;
   min-height: 270px;
 `;
-export const CardMedia = ({ image }) => <StyledMedia image={image}/>;
+export const CardMedia = ({ image, children }) => (
+  <StyledMedia image={image}>
+    {children}
+  </StyledMedia>
+);
 
 CardMedia.defaultProps = {
+  image: undefined,
   children: undefined,
 };
 
 CardMedia.propTypes = {
-  children: PropTypes.string,
+  image:  PropTypes.string,
+  children: PropTypes.node,
 };
 //#endregion
 
@@ -50,7 +57,7 @@ CardMedia.propTypes = {
 const StyledCard = styled.div`
   background-color: #fff;
   border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid ${props => props.theme.colors.border};
   overflow:hidden; //corrige arredondamento na de cards com imagem, mais detalhes aula 135
 `;
 
@@ -69,4 +76,34 @@ Card.propTypes = {
 };
 
 //#endregion
+
+//#region CardMediaDescription
+
+export const StyledMediaDescription = styled.div`
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 8px 16px;
+  color: #fff;
+  align-self: flex-end;
+  flex: 1;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+`;
+
+export const CardMediaDescription = ({children}) => (
+  <StyledMediaDescription>
+    {children}
+  </StyledMediaDescription>
+);
+
+CardMediaDescription.defaultProps = {
+  children: undefined,
+};
+
+CardMediaDescription.propTypes = {
+  children: PropTypes.node,
+};
+
+//#endregion CardMediaDescription
 export default Card;
