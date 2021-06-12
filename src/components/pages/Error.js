@@ -7,7 +7,6 @@ import Section from "components/molecules/Section";
 import Grid from "components/atoms/Grid";
 import Heading from "components/atoms/Heading";
 import Button from "components/atoms/Button";
-import { linkTo } from "@storybook/addon-links";
 
 const ImageContainer = styled.div`
   text-align: right;  
