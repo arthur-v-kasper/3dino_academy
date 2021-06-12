@@ -1,5 +1,3 @@
-import faker from "faker";
-
 import DinoDefault from "stories/assets/dino-vet2.jpg";
 
 import products from "./fixtures/products.json";
